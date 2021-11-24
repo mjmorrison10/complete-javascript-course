@@ -111,3 +111,24 @@ if (
 } else {
   console.log(`The winning team requires a minimum score of 100.`);
 }
+
+// End of Coding Challenge #3
+
+// Coding Challenge #4
+
+const bill = [274, 40, 430];
+
+const value = 0;
+
+const tip =
+  bill[value] >= 50 && bill[value] <= 300
+    ? console.log(
+        `The bill was ${bill[value]}, the tip was ${
+          bill[value] * 0.15
+        }, and the total value is ${(bill[value] * 1.15).toFixed(2)}`
+      )
+    : console.log(
+        `The bill was ${bill[value]}, the tip was ${
+          bill[value] * 0.2
+        }, and the total value is ${(bill[value] * 1.2).toFixed(2)}`
+      );
