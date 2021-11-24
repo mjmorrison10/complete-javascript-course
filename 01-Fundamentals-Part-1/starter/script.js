@@ -14,17 +14,17 @@ const marksBMIDataOne = marksWeightDataOne / marksHeightDataOne ** 2;
 const johnsBMIDataOne = johnsWeightDataOne / johnsHeightDataOne ** 2;
 const marksHigherBMIDataOne = marksBMIDataOne > johnsBMIDataOne;
 
-console.log(`Mark's BMI for Data One is ${marksBMIDataOne}
-John's BMI for Data one is ${johnsBMIDataOne}
-If true, the winner is Mark - ${marksHigherBMIDataOne}`);
+// console.log(`Mark's BMI for Data One is ${marksBMIDataOne}
+// John's BMI for Data one is ${johnsBMIDataOne}
+// If true, the winner is Mark - ${marksHigherBMIDataOne}`);
 
 const marksBMIDataTwo = marksWeightDataTwo / marksHeightDataTwo ** 2;
 const johnsBMIDataTwo = johnsWeightDataTwo / johnsHeightDataTwo ** 2;
 const marksHigherBMIDataTwo = marksBMIDataTwo > johnsBMIDataTwo;
 
-console.log(`Mark's BMI for Data One is ${marksBMIDataTwo}
-John's BMI for Data one is ${johnsBMIDataTwo}
-If true, the winner is Mark - ${marksHigherBMIDataTwo}`);
+// console.log(`Mark's BMI for Data One is ${marksBMIDataTwo}
+// John's BMI for Data one is ${johnsBMIDataTwo}
+// If true, the winner is Mark - ${marksHigherBMIDataTwo}`);
 // End of Coding Challenge #1
 
 // Coding Challenge #2
@@ -41,7 +41,7 @@ if (marksHigherBMIDataOne) {
   )} has a higher BMI than Mark at ${marksBMIDataOne.toFixed(2)}`;
 }
 
-console.log(whoHasHigherBMIDataOne);
+// console.log(whoHasHigherBMIDataOne);
 
 let whoHasHigherBMIDataTwo;
 
@@ -55,18 +55,47 @@ if (marksHigherBMIDataTwo) {
   )} has a higher BMI than Mark at ${marksBMIDataTwo.toFixed(2)}`;
 }
 
-console.log(whoHasHigherBMIDataTwo);
+// console.log(whoHasHigherBMIDataTwo);
 
 // End of Coding Challenge #2
 
 // Coding Challenge #3
 
+const dolphinsScore = [96, 108, 89];
 
+const koalasScore = [88, 91, 110];
 
+// dolphinsScore = [96, 50, 89];
+// koalasScore = [100, 99, 99];
 
-// Video 25
+const averageDolphinScore =
+  (dolphinsScore[0] + dolphinsScore[1] + dolphinsScore[2]) /
+  dolphinsScore.length;
 
- 
+const averageKoalaScore =
+  (koalasScore[0] + koalasScore[1] + koalasScore[2]) / koalasScore.length;
 
+console.log(`The average score of the Dolphins is ${averageDolphinScore}`);
 
-    
+console.log(`The average score of the Koalas is ${averageKoalaScore}`);
+
+// averageDolphinScore = 10;
+// averageKoalaScore = 5;
+
+if (averageDolphinScore == averageKoalaScore) {
+  console.log(`Both teams tie!`);
+} else if (
+  averageDolphinScore > averageKoalaScore &&
+  (dolphinsScore[0] > 99 || dolphinsScore[1] > 99 || dolphinsScore[2] > 99)
+) {
+  console.log(
+    `The Dolphins have a higher average score of ${averageDolphinScore.toFixed(2)}`
+  );
+} else if (
+  averageKoalaScore > averageDolphinScore &&
+  (koalasScore[0] > 99 || koalasScore[1] > 99 || koalasScore[2] > 99)
+) {
+  console.log(`The Koalas have a higher average score of ${averageKoalaScore.toFixed(2)}`);
+} else {
+  console.log(`The winning team requires a minimum score of 100.`);
+}
