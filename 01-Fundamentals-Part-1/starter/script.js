@@ -82,20 +82,32 @@ console.log(`The average score of the Koalas is ${averageKoalaScore}`);
 // averageDolphinScore = 10;
 // averageKoalaScore = 5;
 
-if (averageDolphinScore == averageKoalaScore) {
+if (
+  averageDolphinScore == averageKoalaScore &&
+  (dolphinsScore[0] > 99 ||
+    dolphinsScore[1] > 99 ||
+    dolphinsScore[2] > 99 ||
+    koalasScore[0] > 99 ||
+    koalasScore[1] > 99 ||
+    koalasScore[2] > 99)
+) {
   console.log(`Both teams tie!`);
 } else if (
   averageDolphinScore > averageKoalaScore &&
   (dolphinsScore[0] > 99 || dolphinsScore[1] > 99 || dolphinsScore[2] > 99)
 ) {
   console.log(
-    `The Dolphins have a higher average score of ${averageDolphinScore.toFixed(2)}`
+    `The Dolphins have a higher average score of ${averageDolphinScore.toFixed(
+      2
+    )}`
   );
 } else if (
   averageKoalaScore > averageDolphinScore &&
   (koalasScore[0] > 99 || koalasScore[1] > 99 || koalasScore[2] > 99)
 ) {
-  console.log(`The Koalas have a higher average score of ${averageKoalaScore.toFixed(2)}`);
+  console.log(
+    `The Koalas have a higher average score of ${averageKoalaScore.toFixed(2)}`
+  );
 } else {
   console.log(`The winning team requires a minimum score of 100.`);
 }
